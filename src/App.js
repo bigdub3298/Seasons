@@ -1,10 +1,14 @@
-import React from "react";
+import React, { Component } from "react";
+import SeasonDisplay from "./components/SeasonDisplay";
 
-export default function App() {
-  return (
-    <div>
-      Hi There!
-      <h1>Sup Bitches</h1>
-    </div>
-  );
+export class App extends Component {
+  render() {
+    return (
+      <div>
+        <SeasonDisplay />
+      </div>
+    );
+  }
 }
+
+export default App;
