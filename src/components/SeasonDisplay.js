@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export class SeasonDisplay extends Component {
   render() {
-    return <div>Season Display</div>;
+    return <div>Latitude: {this.props.lat}</div>;
   }
 }
 
