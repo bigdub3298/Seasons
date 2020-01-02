@@ -35,8 +35,8 @@ export class App extends Component {
       );
     }
 
-    // loadin
-    return <Spinner />;
+    // loading
+    return <Spinner message="Please accept location request" />;
   }
 }
 
