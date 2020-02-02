@@ -19,25 +19,23 @@ export function App() {
   };
 
   const renderContent = (latitude, errorMessage) => {
-    if (errorMessage && !latitude) {
+    if (errorMessage) {
       return <div>Error: {errorMessage}</div>;
-    }
-
-    if (!errorMessage && latitude) {
+    } else if (latitude) {
       return (
         <div>
           <SeasonDisplay lat={latitude} />
         </div>
       );
+    } else {
+      // loading
+      return <Spinner message="Please accept location request" />;
     }
-
-    // loading
-    return <Spinner message="Please accept location request" />;
   };
 
   useEffect(() => {
     getLatitude();
-  }, [latitude]);
+  }, []);
 
   return renderContent(latitude, errorMessage);
 }
